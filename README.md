@@ -1,6 +1,6 @@
-# Fast attack detection toxicity classification
+# Fast user prompt attack detection
 
-An exceptionally fast user prompt attack detection system constructed with FastAPI 🚀. It stands as an optimal solution for applications demanding swift attack detection without reliance on a GPU. Additionally, it includes an evaluation component for assessing LLM responses and ensuring safety. This repository is built on top of [last_layer](https://github.com/arekusandr/last_layer).
+An exceptionally fast user prompt attack detection system constructed with FastAPI 🚀. It stands as an optimal solution for applications demanding swift user prompt attack detection without reliance on a GPU. Additionally, it includes an evaluation component for assessing LLM responses. This repository is built on top of [last_layer](https://github.com/arekusandr/last_layer).
 
 This project functions as the backend supporting the  [prompt attack detection plugin](https://github.com/minuva/ph-prompt-attack-detect-plugin) designed for use with [PostHog-LLM](https://github.com/postlang/posthog-llm).
 
