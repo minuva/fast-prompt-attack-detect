@@ -32,13 +32,16 @@ Run the following command to start the server (the root directory):
 
 ```bash
 docker build --tag attack .
-docker run -p 9612:9612 -it attack
+docker run --network=postlang --network-alias=prompt-attack -p 9612:9612 -it attack
 ```
+
+The network and the network alias are used to allow PostHog-LLM to communicate with the prompt attack detection service.
+Since PostHog-LLM is running in a docker container, we connect the two services by adding them to the same network for *fast* and *reliable* communication.
 
 # Example call
 ```bash
 curl -X 'POST' \
-  'http://127.0.0.1:9612/conversation_prompt_attack_plugin' \
+  'http://localhost:9612/conversation_prompt_attack_plugin' \
   -H 'accept: application/json' \
   -H 'Content-Type: application/json' \
   -d '{
