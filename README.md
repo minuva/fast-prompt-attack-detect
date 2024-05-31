@@ -35,6 +35,9 @@ docker build --tag attack .
 docker run --network=postlang --network-alias=prompt-attack -p 9612:9612 -it attack
 ```
 
+The network and the network alias are used to allow PostHog-LLM to communicate with the prompt attack detection service.
+Since PostHog-LLM is running in a docker container, we connect the two services by adding them to the same network for *fast* and *reliable* communication.
+
 # Example call
 ```bash
 curl -X 'POST' \
